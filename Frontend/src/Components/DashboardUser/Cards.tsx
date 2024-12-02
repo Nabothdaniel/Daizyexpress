@@ -1,5 +1,3 @@
-
-
 interface CardProps {
   title: string;
   icon: JSX.Element; 

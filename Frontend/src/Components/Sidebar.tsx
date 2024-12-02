@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom"
-
+import { FaUsers } from "react-icons/fa6";
 import { AiFillDashboard } from "react-icons/ai";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaFileUpload } from "react-icons/fa";
@@ -24,14 +24,14 @@ const Sidebar = ({isAdmin}: {isAdmin : boolean}) => {
     {
       id: 2,
       name: "Documents",
-      path: isAdmin ? "/admindocument" : "/document",
+      path: isAdmin ? "/totaldocuments" : "/document",
       icon: <IoDocumentTextOutline />
     },
     {
       id: 3,
-      name: "Create",
-      path: "/upload",
-      icon: <FaFileUpload />
+      name: isAdmin ? "Users" : "Create",
+      path: isAdmin ? "/users" : "/upload",
+      icon: isAdmin ?<FaUsers /> : <FaFileUpload />
     },
   ]
   const linkclass = ({ isActive }: {isActive: boolean}) =>

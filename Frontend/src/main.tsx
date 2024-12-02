@@ -13,6 +13,7 @@ import LandingPage from "./Pages/LandingPage.tsx";
 import ForgottenPwd from "./Pages/ForgottenPwd.tsx";
 import UploadPage from "./Pages/AuthorizedPages/UploadPage.tsx";
 import DocumentPage from "./Pages/AuthorizedPages/DocumentPage.tsx";
+import TotalDocuments from "./Pages/AuthorizedPages/TotalDocuments.tsx";
 
 
 function AppRouter() {
@@ -63,6 +64,10 @@ function AppRouter() {
 				{
 					path: "/document",
 					element: <DocumentPage />,
+				},
+				{
+					path: "/totaldocuments",
+					element: <TotalDocuments />,
 				},
 			],
 		},
